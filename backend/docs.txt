@@ -1,0 +1,65 @@
+
+                    Rotas alteradas:
+
+Multiplas-Bet365                    ==> Bilhete-Pronto
+Ambas-Marcam                        ==> Ambos-Marcam
+Placar-Exato-Dos-Jogos-De-Hoje      ==> Jogos-Hoje-Placar
+Favoritos-De-Hoje                   ==> Favoritos-Hoje
+Apostas-Do-Dia                      ==> Apostas-Hoje
+Gol-No-1-Tempo                      ==> 1-Tempo-Gols
+Gol-No-2-Tempo                      ==> 2-Tempo-Gols
+Para-Over-2-5                       ==> Over-2-5
+Cima-de-1-5-Gols                    ==> Acima-1-5-Gols
+Gol-No-Primeiro-Tempo               ==> 1-Tempo-Gols
+
+
+
+                    LINKS DAS ROTAS:
+
+1. http://154.12.226.71:3000/palpites/
+2. http://154.12.226.71:3000/palpites/amanha
+3. http://154.12.226.71:3000/palpites/bilhete
+4. http://154.12.226.71:3000/palpites/gols-hoje
+5. http://154.12.226.71:3000/palpites/placar-exato
+6. http://154.12.226.71:3000/palpites/favoritos-hoje
+7. http://154.12.226.71:3000/palpites/gol-primeiro-tempo
+8. http://154.12.226.71:3000/estatisticas/over-1-5
+9. http://154.12.226.71:3000/estatisticas/over-2-5
+10. http://154.12.226.71:3000/estatisticas/ambas-marca
+11. http://154.12.226.71:3000/estatisticas/gol-primeiro-tempo
+12. http://154.12.226.71:3000/estatisticas/campeonatos/cartoes
+13. http://154.12.226.71:3000/estatisticas/campeonatos/over-1-5
+14. http://154.12.226.71:3000/estatisticas/campeonatos/over-2-5
+15. http://154.12.226.71:3000/estatisticas/campeonatos/over-3-5
+16. http://154.12.226.71:3000/estatisticas/campeonatos/escanteios
+17. http://154.12.226.71:3000/estatisticas/campeonatos/over-1-time
+18. http://154.12.226.71:3000/estatisticas/campeonatos/over-2-time
+19. http://154.12.226.71:3000/estatisticas/campeonatos/ambas-marcam
+
+
+ERRO RANDOM:
+1. http://154.12.226.71:3000/palpites/palpite-certo
+URL INVALIDA ==> https://dicasbet.com.br/palpites-certo/
+
+
+                            CORREÇÕES SOLICITADAS:
+ 
+1. Adicionar links nos países.
+2. Centralizar e deixar todos logos do mesmo tamanho na página dos jogos.
+3. Corrigir layout no modo escuro, alguns dados e botões não aparece.                                                                 [ Escolhendo palheta de cores ]
+4. Corrigir responsivo.
+5. Adicionar opção de favoritar nos logos grandes na parte superior das páginas dos jogos, equipes e ligas.
+6. Corrigir menu: quando abre o menu e clica em alguma liga ele não se fecha sozinho
+7. Corrigir mobile que a bottom nav sobrepõe o conteúdo do site
+8. Adicionar calendário ( Tem no nosso código do GitHub)
+
+9. Colocar link nos escudos das duas equipes nas páginas dos jogos                                                                    [ RESOLVIDO ]
+10. Separar os jogos da página inicial por ligas                                                                                      [ Verificar o custo de processamento pra realizar]
+11. Página inicial: Deixar “todos os jogos” “jogos encerrados”, “próximos jogos” correto, tem jogos do dia seguinte na página         [ RESOLVIDO ]
+12. Tabela de classificação com uma coluna faltando                                                                                   [ RESOLVIDO ]
+
+
+Palheta de cores:
+
+Dark Blue: #2B4865
+White Blue: hsla(214, 82%, 11%, 1)
