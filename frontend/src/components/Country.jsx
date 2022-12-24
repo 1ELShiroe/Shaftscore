@@ -7,6 +7,7 @@ import { removeFavorite, addFavorite } from "../redux/favoritesRedux";
 import { useDispatch, useSelector } from "react-redux";
 import color from "../assets/colors/color";
 import League from "./League";
+import { BASE_URL } from "../services/Api";
 
 export const Container = styled.div`
   display: flex;
@@ -53,12 +54,16 @@ const Country = ({ name, data, id }) => {
             width: "7%",
             marginRight: 10,
           }}
-          src={`http://154.12.226.71:8087/api/img?type=country&name=${name
-            .toLowerCase()
-            .normalize("NFD")
-            .replace(".", "")
-            .replace(/ +/g, "-")
-            .replace(/[\u0300-\u036f]/g, "")}`}
+          src={
+            name == "International"
+              ? "https://static.shaftscore.com/wp-content/uploads/2021/07/logo-shaftscore-site-outubro-2022.png"
+              : `${BASE_URL}/img?type=country&name=${name
+                  .toLowerCase()
+                  .normalize("NFD")
+                  .replace(".", "")
+                  .replace(/ +/g, "-")
+                  .replace(/[\u0300-\u036f]/g, "")}`
+          }
         />
 
         {name == "Brazil" ? "Brasil" : name}

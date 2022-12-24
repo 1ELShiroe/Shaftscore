@@ -11,7 +11,7 @@ function Index() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     Axios.get("/estatisticas/over-1-5/").then((res) => {
-      setMatch(res.data);
+      setMatch(res.data.data);
     });
   }, []);
   return (

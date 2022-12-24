@@ -9,7 +9,7 @@ import {
 } from "./styles";
 import { TiStarOutline } from "react-icons/ti"; //Vazio
 import League from "../League";
-import Api from "../../services/Api";
+import Api, { BASE_URL } from "../../services/Api";
 import { useDispatch, useSelector } from "react-redux";
 import Country from "../Country";
 
@@ -17,13 +17,12 @@ export let DATA = {
   FAVORITOS: [],
 };
 
-function Index({ league, setLeague }) {
+function Index() {
   const favorite = useSelector((state) => state.favorite);
   const [country, setCountry] = useState();
 
   useEffect(() => {
     Api.get("/country/league/").then((res) => {
-      console.log(res.data);
       setCountry(res.data.data);
     });
   }, []);
@@ -61,33 +60,18 @@ function Index({ league, setLeague }) {
         </ContainerTitle>
         <ContainerContent>
           {country &&
-            country.top.map((p) => {
-              const stringTrade = (name) => {
-                return name
+            country.top.map((p) => (
+              <League
+                key={p.id}
+                id={p.name}
+                img={`${BASE_URL}/img?type=league&name=${p.name
                   .toLowerCase()
-                  .normalize("NFD")
-                  .replace(/[\u0300-\u036f]/g, "")
-                  .replace(/ +/g, "-")
-                  .replace("/", "-")
-                  .replace(".", "")
-                  .replace("'", "")
-                  .replace(":", "")
-                  .replace(/ı+/g, "i")
-                  .replace(/-{2,}/g, "-");
-              };
-              return (
-                <League
-                  key={p.id}
-                  id={p.name}
-                  img={`http://154.12.226.71:8087/api/img?type=league&name=${p.name
-                    .toLowerCase()
-                    .replace(/ +/g, "-")}`}
-                  name={p.name_pt}
-                  type={"top"}
-                  href={`estatistica/${p.link}`}
-                />
-              );
-            })}
+                  .replace(/ +/g, "-")}`}
+                name={p.name_pt}
+                type={"top"}
+                href={`estatistica/${p.link}`}
+              />
+            ))}
         </ContainerContent>
       </ContentLeague>
       <ContentLeague>
@@ -96,9 +80,10 @@ function Index({ league, setLeague }) {
         </ContainerTitle>
         <ContainerContent>
           {country &&
-            country.country.map((country) => (
-              <Country name={country.country} data={country.data} />
-            ))}
+            country.country.map((country) => {
+              if (country.country !== "Esports")
+                return <Country name={country.country} data={country.data} />;
+            })}
         </ContainerContent>
       </ContentLeague>
     </Container>

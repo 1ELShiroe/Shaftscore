@@ -19,18 +19,21 @@ function Index() {
   }, [search]);
   return (
     <Main>
-      <Title>Placar exato dos jogos de hoje</Title>
+      <Title>Gols Hoje</Title>
       <Description>Palpites com placares exatos e totais de gols</Description>
       <Skeleton loading={loading} />
       {jogos &&
-        jogos.map((p, index) => (
-          <Card
-            key={index}
-            title={p["league"]}
-            type="golsHoje"
-            data={p.games[0]}
-          />
-        ))}
+        jogos.map((p, index) => {
+          console.log(p.games[0][0])
+          return (
+            <Card
+              key={index}
+              title={p["league"]}
+              type="golsHoje"
+              data={p.games[0]}
+            />
+          )
+        })}
     </Main>
   );
 }

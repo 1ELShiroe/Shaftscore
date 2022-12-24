@@ -32,7 +32,6 @@ import EstatisticasCampeonatoOverFirstTime from "./pages/EstatisticasCampeonatoO
 import styled from "styled-components";
 import NavBottom from "./components/NavBottom";
 import NavBar from "./components/NavBar";
-
 function App() {
   const [darkMode, setDarkMode] = useState(localStorage.getItem("dark"));
   const [search, setSearch] = useState("");

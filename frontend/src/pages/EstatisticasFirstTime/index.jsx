@@ -10,7 +10,7 @@ function Index() {
   const [match, setMatch] = useState();
   useEffect(() => {
     Axios.get("/estatisticas/over-ht/").then((res) => {
-      setMatch(res.data);
+      setMatch(res.data.data);
     });
   }, []);
 

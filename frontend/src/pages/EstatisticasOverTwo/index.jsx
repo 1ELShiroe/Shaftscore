@@ -12,7 +12,7 @@ function Index() {
   const [loading, setLoading] = useState();
   useEffect(() => {
     Axios.get("/estatisticas/over-2-5/").then((res) => {
-      setMatch(res.data);
+      setMatch(res.data.data);
       setLoading(false);
     });
   }, []);

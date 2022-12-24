@@ -114,8 +114,6 @@ const Suggestion = styled.div`
 
 const Card = ({ data, title, type, reason }) => {
   const [actived, setActived] = useState(true);
-  var DATA = [];
-  DATA.push(data);
   console.log(data);
   return (
     <Container>
@@ -128,7 +126,7 @@ const Card = ({ data, title, type, reason }) => {
       </Header>
 
       <Content className={actived ? "ShowHide" : "noHide"}>
-        {data instanceof Object ? (
+        {data instanceof Object  && type !== "golsHoje" ? (
           <>
             <ItemCard>
               <Date>{data.date}</Date>
@@ -164,6 +162,7 @@ const Card = ({ data, title, type, reason }) => {
               item && (
                 <ItemCard>
                   <Date>{item.date}</Date>
+                  {console.log(item)}
                   <WrapperCard>
                     <Confrontation>
                       {item.confront && item.confront}

@@ -12,7 +12,7 @@ function Index() {
   useEffect(() => {
     Axios.get("/melhores-campeonatos/acima-ou-abaixo-de-3-5-gols/").then(
       (res) => {
-        setMatch(res.data);
+        setMatch(res.data.data);
       }
     );
   }, []);
