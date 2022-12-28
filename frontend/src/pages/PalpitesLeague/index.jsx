@@ -15,7 +15,8 @@ function Index() {
       `/ligas/${window.location.pathname.split("/")[3].toLocaleLowerCase()}`
     )
       .then((res) => {
-        setLeagueData(res.data);
+        console.log(res)
+        setLeagueData(res.data.data);
         setLoading(false);
       })
       .catch((err) => {
